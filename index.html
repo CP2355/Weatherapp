@@ -21,6 +21,12 @@
       text-align: center;
     }
 
+    h3 {
+      border: 5px solid;
+      padding: 10px;
+      background-color: rgb(243, 234, 234);
+    }
+
     ul {
       list-style: none;
       text-align: center;
@@ -34,7 +40,7 @@
     }
 
     body {
-      background: powderblue;
+      background: rgb(62, 123, 131);
     }
 
     button {
@@ -47,8 +53,9 @@
       line-height: 20px;
       padding: 10px 10px;
       border-radius: 5px;
-      box-shadow: gray 0px 10px 10px 0;
+      box-shadow: black 0px 10px 10px 0;
     }
+
     img {
       display: block;
       width: 100px;
@@ -64,17 +71,6 @@
     .bonus {
       display: block;
       text-align: center;
-    }
-
-    .card-title {
-      margin: 0px;
-      width: max-content;
-      color: navy;
-    }
-
-    .container {
-      text-align: center;
-      margin-left: 200px;
     }
 
     .row {
@@ -98,16 +94,6 @@
       font-size: 20px;
     }
 
-    .weather-temperature .active {
-      display: block;
-      color: black;
-      text-decoration: none;
-    }
-
-    .weather-temperature .active:hover {
-      text-decoration: none;
-      cursor: default;
-    }
 
     #btn {
       display: block;
@@ -180,72 +166,18 @@
           />
           <div class="float-left">
             <span class="temperature" id="temperature"></span>
-            <span class="degrees">
-              <a href="#" id="celsius-link" class="active">ºC</a>|
-              <a href="#" id="fahrenheit-link">ºF</a>
-            </span>
           </div>
         </div>
       </div>
       <span id="weather-description"></span>
       <ul>
         <li>Wind Speed: <span id="wind-speed"></span> Km/H</li>
-        <li>Precipitation: <span id="precipitation"> %</span></li>
+        <li>Humidity: <span id="humidity"> %</span></li>
       </ul>
       <h3>Five Day Forecast</h3>
-      <br />
-      <div class="container">
-        <div class="card-group">
-          <div class="row row-cols-5">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Monday</h5>
-                <p class="card-text">High</p>
-                <p>77°</p>
-                <p class="card-text">Low</p>
-                <p>70°</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Tuesday</h5>
-                <p class="card-text">High</p>
-                <p>79°</p>
-                <p class="card-text">Low</p>
-                <p>63°</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Wednesday</h5>
-                <p class="card-text">High</p>
-                <p>79°</p>
-                <p class="card-text">Low</p>
-                <p>68°</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Thursday</h5>
-                <p class="card-text">High</p>
-                <p>79°</p>
-                <p class="card-text">Low</p>
-                <p>66°</p>
-              </div>
-            </div>
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Friday</h5>
-                <p class="card-text">High</p>
-                <p>79°</p>
-                <p class="card-text">Low</p>
-                <p>64°</p>
-              </div>
-            </div>
-          </div>
-        </div>
+      <div class="weather-forecast" id="forecast"></div>
       </div>
-      <script src="weatherapi1.js"></script>
       <a href=https://github.com/CP2355/Weatherapp target="_blank">Open source code</a> by Charleta Partee
-  </body>
+      <script src="weatherapi1.js"></script>
+    </body>
 </html>
