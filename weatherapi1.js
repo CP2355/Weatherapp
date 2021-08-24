@@ -43,7 +43,7 @@ function displayForecast(response) {
 
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 5) {
       forecastHTML =
         forecastHTML +
         ` 
@@ -118,13 +118,14 @@ function currentTemperature(response) {
 
   let h2 = document.querySelector("h2");
   let temperature = document.querySelector("#temperature");
+  let newTemp = Math.round(response.data.main.temp);
   let weatherDescription = document.querySelector("#weather-description");
   let humidity = document.querySelector("#humidity");
   let windSpeed = document.querySelector("#wind-speed");
   let icon = document.querySelector("#icon");
 
   h2.innerHTML = response.data.name;
-  temperature.innerHTML = `${Math.roundresponse.data.main.temp}ºF`;
+  temperature.innerHTML = `${newTemp}ºF`;
   weatherDescription.innerHTML = response.data.weather[0].description;
   humidity.innerHTML = `${response.data.main.humidity}%`;
   windSpeed.innerHTML = Math.round(response.data.wind.speed);
